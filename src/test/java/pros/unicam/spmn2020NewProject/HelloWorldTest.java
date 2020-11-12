@@ -54,6 +54,7 @@ public class HelloWorldTest {
 	}
 
 	@Test
+	@Disabled
 	void testHelloShouldReturnAString() {
 		assertNotNull(HelloWorld.hello());
 	}
