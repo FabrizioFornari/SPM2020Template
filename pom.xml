@@ -104,6 +104,31 @@
     <version>3.141.59</version>
 </dependency>
 	
+<!-- Rest Assured -->
+<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>rest-assured</artifactId>
+    <version>4.3.2</version>
+    <scope>test</scope>
+</dependency>
+
+<!-- htmlunit-driver -->
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/htmlunit-driver -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>htmlunit-driver</artifactId>
+    <version>2.45.0</version>
+</dependency>
+
+<!-- phantomjsdriver -->
+<!-- https://mvnrepository.com/artifact/com.codeborne/phantomjsdriver -->
+<dependency>
+    <groupId>com.codeborne</groupId>
+    <artifactId>phantomjsdriver</artifactId>
+    <version>1.4.4</version>
+</dependency>
+
     
   </dependencies>
 
