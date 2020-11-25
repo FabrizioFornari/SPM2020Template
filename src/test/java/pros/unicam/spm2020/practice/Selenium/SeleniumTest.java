@@ -41,7 +41,12 @@ class SeleniumTest {
 	 */
 	@BeforeEach
 	void setUp() throws Exception {
+		if(System.getProperty("os.name").equals("Mac OS X")) {
 		System.setProperty("webdriver.chrome.driver", projectPath+"/drivers/mac/chromedriver");
+		}
+		if(System.getProperty("os.name").contains("Windows")) {
+			System.setProperty("webdriver.chrome.driver", projectPath+"/drivers/windows/chromedriver");
+		}
 		driver = new ChromeDriver();
 	}
 
