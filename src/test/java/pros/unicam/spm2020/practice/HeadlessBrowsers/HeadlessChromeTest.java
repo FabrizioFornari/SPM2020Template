@@ -11,8 +11,11 @@ import org.openqa.selenium.By;
 //import org.junit.Test;
 //import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.junit.Assert.assertTrue;
 
@@ -60,9 +63,10 @@ public class HeadlessChromeTest
 	    
 		ChromeOptions chromeOptions = new ChromeOptions();
 	    chromeOptions.addArguments("--headless");
+	    chromeOptions.addArguments("--window-size=1400,600");
 
 	    driver = new ChromeDriver(chromeOptions);
-	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	}
 
 	/**
@@ -93,8 +97,9 @@ public class HeadlessChromeTest
 		driver.get("http://mail.google.com");
 
 		//findElement by id
-		driver.findElement(By.id("identifierId")).sendKeys("john.luiz.2001@gmail.com");
-			
+		WebElement element = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated(By.id("identifierId")));
+		//driver.findElement(By.id("identifierId")).sendKeys("john.luiz.2001@gmail.com");
+		element.sendKeys("john.luiz.2001@gmail.com");
 		
 		//Find Element by className
 		driver.findElement(By.className("VfPpkd-RLmnJb")).click();
@@ -120,6 +125,7 @@ public class HeadlessChromeTest
 	}
   
 
+  
 
 
 }
