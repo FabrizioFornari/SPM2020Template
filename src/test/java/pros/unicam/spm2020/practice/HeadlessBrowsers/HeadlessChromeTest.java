@@ -122,7 +122,7 @@ public class HeadlessChromeTest
 		System.out.println(at);		
 		Thread.sleep(4000);
 		
-		Assert.assertTrue(at.contains(et));
+		Assert.assertTrue("title page contains john.luiz.2001@gmail.com - Gmail, meaning it logged in",at.contains(et));
 		
 
 
