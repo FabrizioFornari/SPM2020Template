@@ -61,6 +61,7 @@ class SeleniumTest {
 
 	
 	@Test
+	@Disabled
 	void checkUserLoginGmail() throws InterruptedException {
 		
 		// navigate your driver to mail.google.com
