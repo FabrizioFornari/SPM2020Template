@@ -63,10 +63,9 @@ public class HeadlessChromeTest
 	    
 		ChromeOptions chromeOptions = new ChromeOptions();
 	    chromeOptions.addArguments("--headless");
-	    chromeOptions.addArguments("--proxy-server='direct://'");
-	    chromeOptions.addArguments("--proxy-bypass-list=*");
 	    chromeOptions.addArguments("--start-maximized");
-	    chromeOptions.addArguments("--window-size=1980,1080");
+	    //https://www.whatismybrowser.com/detect/what-is-my-user-agent
+	    chromeOptions.addArguments("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36");
 	    driver = new ChromeDriver(chromeOptions);
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
