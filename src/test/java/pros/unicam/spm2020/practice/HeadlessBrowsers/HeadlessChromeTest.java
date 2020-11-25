@@ -63,10 +63,10 @@ public class HeadlessChromeTest
 	    
 		ChromeOptions chromeOptions = new ChromeOptions();
 	    chromeOptions.addArguments("--headless");
-	    chromeOptions.addArguments("--window-size=1400,600");
-
+	    chromeOptions.addArguments("--start-maximized");
+	    chromeOptions.addArguments("--window-size=1200,800");
 	    driver = new ChromeDriver(chromeOptions);
-	    driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
 	/**
