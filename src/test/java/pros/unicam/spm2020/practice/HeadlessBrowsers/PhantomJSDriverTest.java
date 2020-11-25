@@ -3,6 +3,7 @@ package pros.unicam.spm2020.practice.HeadlessBrowsers;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
@@ -23,6 +24,7 @@ public class PhantomJSDriverTest {
 	}
 	
 	@Test
+	@Disabled
 	void test() {
 		System.setProperty("phantomjs.binary.path", projectPath+"/drivers/mac/phantomjs");
 

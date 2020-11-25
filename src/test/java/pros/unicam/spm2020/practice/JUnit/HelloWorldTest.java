@@ -62,24 +62,28 @@ public class HelloWorldTest {
 	}
 
 	@Test
+	@Disabled
 	@Tag("display")
 	@DisplayName("Custom test name containing spaces")
 	void testWithDisplayNameContainingSpaces() {
 	}
 
 	@Test
+	@Disabled
 	@Tag("display")
 	@DisplayName(" °□°） ")
 	void testWithDisplayNameContainingSpecialCharacters() {
 	}
 
 	@Test
+	@Disabled
 	@Tag("display")
 	@DisplayName("😈")
 	void testWithDisplayNameContainingEmoji() {
 	}
 
 	@Test
+	@Disabled
 	@DisplayName("Custom testNumber")
 	void testNumber() {
 		inputNumber = hW.printNumber(3);
@@ -87,6 +91,7 @@ public class HelloWorldTest {
 	}
 
 	@DisplayName("Custom testNumberFizz")
+	@Disabled
 	@Test
 	void testNumberFizz() {
 		inputNumber = hW.printNumber(7);
@@ -107,6 +112,7 @@ public class HelloWorldTest {
 	}
 
 	@Test
+	@Disabled
 	@EnabledOnOs(MAC)
 	void onlyOnMacOs() {
 		HelloWorld tester = new HelloWorld();
@@ -114,6 +120,7 @@ public class HelloWorldTest {
 	}
 
 	@Test
+	@Disabled
 	@EnabledOnOs(WINDOWS)
 	void onlyOnWindowsOs() {
 		HelloWorld tester = new HelloWorld();
@@ -121,6 +128,7 @@ public class HelloWorldTest {
 	}
 
 	@Test
+	@Disabled
 	@EnabledOnOs(LINUX)
 	void onlyOnLinuxOs() {
 		HelloWorld tester = new HelloWorld();
@@ -128,6 +136,7 @@ public class HelloWorldTest {
 	}
 
 	@Test
+	@Disabled
 	@Tag("taxes")
 	void testingTaxCalculation() {
 	}

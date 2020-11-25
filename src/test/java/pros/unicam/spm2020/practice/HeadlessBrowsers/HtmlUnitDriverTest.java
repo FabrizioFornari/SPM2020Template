@@ -51,7 +51,7 @@ class HtmlUnitDriverTest {
 
 
 	@Test
-	//@Disabled
+	@Disabled
 	void htmUnitDriver() throws Exception {
 	
 	HtmlUnitDriver driver = new HtmlUnitDriver();

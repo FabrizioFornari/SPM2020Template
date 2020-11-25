@@ -23,6 +23,7 @@ import pros.unicam.spmn2020NewProject.MyClass;
 public class MyClassTest {
 
 	@Test
+	@Disabled
 	public void testExceptionIsThrown() {
 
 		MyClass tester = new MyClass(); // MyClass is tested
@@ -33,6 +34,7 @@ public class MyClassTest {
 	}
 
 	@Test
+	@Disabled
 	public void exceptionTesting() {
 		Throwable exception = assertThrows(IllegalArgumentException.class, () -> {
 			throw new IllegalArgumentException("a message");
@@ -41,6 +43,7 @@ public class MyClassTest {
 	}
 
 	@Test
+	@Disabled
 	public void testMultiplyShouldReturnProperMultiplicationResult() {
 		// Assume.assumeFalse(System.getProperty("os.name").contains("Mac OS X"));
 		MyClass tester = new MyClass(); // MyClass is tested
@@ -50,6 +53,7 @@ public class MyClassTest {
 	}
 
 	@Test
+	@Disabled
 	public void testMultiplyShouldAcceptAnyValue() {
 		MyClass tester = new MyClass(); // MyClass is tested
 
@@ -59,6 +63,7 @@ public class MyClassTest {
 	}
 
 	@Test
+	@Disabled
 	public void multiplicationOfXByOneShouldReturnX() {
 		// Assumption
 		assumeFalse(System.getProperty("os.name").contains("Mac OS X"));
@@ -73,6 +78,7 @@ public class MyClassTest {
 	
 
 	@Test
+	@Disabled
 	public void multiplicationOfZeroIntegersShouldReturnZero() {
 		MyClass tester = new MyClass(); // MyClass is tested
 
@@ -84,12 +90,14 @@ public class MyClassTest {
 	}
 
 	@ParameterizedTest
+	@Disabled
 	@ValueSource(strings = { "Hello", "JUnit" })
 	void withValueSource(String word) {
 		assertNotNull(word);
 	}
 
 	@ParameterizedTest
+	@Disabled
 	@ValueSource(strings = { "pippo", "radar", "able was I ere I saw elba" })
 	void palindromes(String candidate) {
 		MyClass tester = new MyClass();
@@ -97,6 +105,7 @@ public class MyClassTest {
 	}
 
 	@Test // Multi-line script, custom engine name and custom reason.
+	@Disabled
 	@EnabledIf(value = { "load('nashorn:mozilla_compat.js')", "importPackage(java.time)", "",
 			"var today = LocalDate.now()", "var tomorrow = today.plusDays(1)",
 			"tomorrow.isAfter(today)" }, engine = "nashorn", reason = "Self-fulfilling: {result}")
@@ -120,6 +129,7 @@ public class MyClassTest {
 	}
 
 	@Test
+	@Disabled
 	void timeoutExceeded() {
 		// The following assertion fails with an error message similar to:
 		// execution exceeded timeout of 10 ms by 91 ms
@@ -130,6 +140,7 @@ public class MyClassTest {
 	}
 	
 	 @Test
+	 @Disabled
 	    void timeoutExceededWithPreemptiveTermination() {
 	        // The following assertion fails with an error message similar to:
 	        // execution timed out after 10 ms
