@@ -117,12 +117,15 @@ public class HeadlessChromeTest
 		Thread.sleep(4000);
 		
 		String at = driver.getTitle();
-		String et = "Inbox (1) - john.luiz.2001@gmail.com - Gmail";
+		String et = "john.luiz.2001@gmail.com - Gmail";
 		
 		System.out.println(at);		
 		Thread.sleep(4000);
+		
+		Assert.assertTrue(at.contains(et));
+		
 
-		Assert.assertEquals(et,at);
+
 	}
   
 
