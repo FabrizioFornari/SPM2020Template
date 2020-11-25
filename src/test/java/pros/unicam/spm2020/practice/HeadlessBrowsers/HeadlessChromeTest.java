@@ -51,7 +51,12 @@ public class HeadlessChromeTest
 	@BeforeEach
 	void setUp() throws Exception {
 		
-	    System.setProperty("webdriver.chrome.driver", projectPath+"/drivers/mac"+"/chromedriver");
+		if(System.getProperty("os.name").equals("Mac OS X")) {
+		System.setProperty("webdriver.chrome.driver", projectPath+"/drivers/mac/chromedriver");
+		}
+		if(System.getProperty("os.name").contains("Windows")) {
+			System.setProperty("webdriver.chrome.driver", projectPath+"\\drivers\\windows\\chromedriver.exe");
+		}
 	    
 		ChromeOptions chromeOptions = new ChromeOptions();
 	    chromeOptions.addArguments("--headless");
