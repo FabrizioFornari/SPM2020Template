@@ -63,8 +63,10 @@ public class HeadlessChromeTest
 	    
 		ChromeOptions chromeOptions = new ChromeOptions();
 	    chromeOptions.addArguments("--headless");
+	    chromeOptions.addArguments("--proxy-server='direct://'");
+	    chromeOptions.addArguments("--proxy-bypass-list=*");
 	    chromeOptions.addArguments("--start-maximized");
-	    chromeOptions.addArguments("--window-size=1200,800");
+	    chromeOptions.addArguments("--window-size=1980,1080");
 	    driver = new ChromeDriver(chromeOptions);
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
