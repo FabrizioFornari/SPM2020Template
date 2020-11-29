@@ -10,7 +10,7 @@
 
   <name>spmn2020NewProject</name>
   <!-- FIXME change it to the project's website -->
-  <url>http://apromore.unicam.it/</url>
+  <url>http://apromore.unicam.it/spmn2020NewProject</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -19,6 +19,7 @@
     
     <junit.jupiter.version>5.3.2</junit.jupiter.version>
   </properties>
+
 
 
 <!--  JUNIT5 -->
