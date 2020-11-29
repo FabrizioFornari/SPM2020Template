@@ -6,6 +6,7 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/WebContent"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/drivers"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
         <property name="context-root" value="spmn2020NewProject"/>
         <property name="java-output-path" value="/spmn2020NewProject/bin"/>
     </wb-module>
