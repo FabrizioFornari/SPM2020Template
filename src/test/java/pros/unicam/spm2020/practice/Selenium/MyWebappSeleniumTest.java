@@ -1,31 +1,23 @@
-package pros.unicam.spm2020.practice.TestAfterDeploy;
+package pros.unicam.spm2020.practice.Selenium;
 
-import org.junit.Assert;
+import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.concurrent.TimeUnit;
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-//import org.junit.Test;
-//import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static org.junit.Assert.assertTrue;
+class MyWebappSeleniumTest {
 
-import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
-public class HeadlessChromeTestIT
-{
-	
 	static String browser;
 	static String projectPath;
 	static String pathToMacDrivers;
@@ -66,11 +58,7 @@ public class HeadlessChromeTestIT
 		}
 	    
 		ChromeOptions chromeOptions = new ChromeOptions();
-	    chromeOptions.addArguments("--headless");
-	    chromeOptions.addArguments("--start-maximized");
-	    //https://www.whatismybrowser.com/detect/what-is-my-user-agent
-	    chromeOptions.addArguments("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36");
-	    driver = new ChromeDriver(chromeOptions);
+		driver = new ChromeDriver(chromeOptions);
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
@@ -83,17 +71,12 @@ public class HeadlessChromeTestIT
 		driver.quit();
 	}
 	
-
-
-  
-  @Test
-  @Tag("AcceptanceTest")
-  void testMyAppTitle() {
-	  driver.navigate().to(address);
-	  System.out.println("Title is: "+driver.getTitle());
-	  assertTrue(driver.getTitle().contains("SPM 2020"));
-  }
-
-  
+	@Test
+	//@Disabled
+	void testMyAppTitle() {
+		  driver.navigate().to(address);
+	      System.out.println("Title is: "+driver.getTitle());
+	      assertTrue(driver.getTitle().contains("SPM 2020"));
+	}
 
 }
