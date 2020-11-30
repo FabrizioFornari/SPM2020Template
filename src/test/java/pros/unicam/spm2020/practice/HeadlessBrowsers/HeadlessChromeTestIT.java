@@ -22,7 +22,7 @@ import static org.junit.Assert.assertTrue;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-public class HeadlessChromeTest
+public class HeadlessChromeTestIT
 {
 	
 	static String browser;
