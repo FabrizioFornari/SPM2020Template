@@ -91,7 +91,7 @@ public class HeadlessChromeTest
   }
   
   @Test
-  @Disabled
+  //@Disabled
   void testMyAppTitle() {
 	  driver.navigate().to("http://localhost/spmn2020NewProject");
 	  System.out.println("Title is: "+driver.getTitle());
