@@ -9,6 +9,7 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -68,8 +69,9 @@ class MyWebappSeleniumTest {
 	}
 	
 	@Test
-	void test() {
-		  driver.navigate().to("http://apromore.unicam.it/spmn2020NewProject");
+	@Disabled
+	void testMyAppTitle() {
+		  driver.navigate().to("http://localhost/spmn2020NewProject");
 	      System.out.println("Title is: "+driver.getTitle());
 	      assertTrue(driver.getTitle().contains("SPM 2020"));
 	}

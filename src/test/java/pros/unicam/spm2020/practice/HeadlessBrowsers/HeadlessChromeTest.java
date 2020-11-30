@@ -89,6 +89,15 @@ public class HeadlessChromeTest
       System.out.println("Title is: "+driver.getTitle());
       assertTrue(driver.getTitle().contains("Selenium"));
   }
+  
+  @Test
+  @Disabled
+  void testMyAppTitle() {
+	  driver.navigate().to("http://localhost/spmn2020NewProject");
+	  System.out.println("Title is: "+driver.getTitle());
+	  assertTrue(driver.getTitle().contains("SPM 2020"));
+  }
+
 
   
   @Test
