@@ -1,4 +1,4 @@
-package pros.unicam.spm2020.practice.HeadlessBrowsers;
+package pros.unicam.spm2020.practice.TestAfterDeploy;
 
 import org.junit.Assert;
 import org.junit.jupiter.api.AfterAll;
@@ -6,6 +6,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 //import org.junit.Test;
@@ -28,6 +29,7 @@ public class HeadlessChromeTestIT
 	static String browser;
 	static String projectPath;
 	static String pathToMacDrivers;
+	static String address;
 	
 	static WebDriver driver;
 	
@@ -56,9 +58,11 @@ public class HeadlessChromeTestIT
 		
 		if(System.getProperty("os.name").equals("Mac OS X")) {
 		System.setProperty("webdriver.chrome.driver", projectPath+"/drivers/mac/chromedriver");
+		address="http://localhost:8080/spmn2020NewProject";
 		}
 		if(System.getProperty("os.name").contains("Windows")) {
 			System.setProperty("webdriver.chrome.driver", projectPath+"\\drivers\\windows\\chromedriver.exe");
+			address="http://localhost/spmn2020NewProject";
 		}
 	    
 		ChromeOptions chromeOptions = new ChromeOptions();
@@ -80,66 +84,16 @@ public class HeadlessChromeTestIT
 	}
 	
 
-  @Test
-  @Disabled
-  public void createChromeDriverHeadless() throws IOException
-  {
-      
-	  driver.navigate().to("https://www.seleniumhq.org/");
-      System.out.println("Title is: "+driver.getTitle());
-      assertTrue(driver.getTitle().contains("Selenium"));
-  }
+
   
   @Test
-  //@Disabled
+  @Tag("AcceptanceTest")
   void testMyAppTitle() {
-	  driver.navigate().to("http://localhost/spmn2020NewProject");
+	  driver.navigate().to(address);
 	  System.out.println("Title is: "+driver.getTitle());
 	  assertTrue(driver.getTitle().contains("SPM 2020"));
   }
 
-
   
-  @Test
-  @Disabled
-  void checkUserLoginGmail() throws InterruptedException {
-		
-		// navigate your driver to mail.google.com
-		driver.get("http://mail.google.com");
-
-		//findElement by id
-		WebElement element = new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated(By.id("identifierId")));
-		//driver.findElement(By.id("identifierId")).sendKeys("john.luiz.2001@gmail.com");
-		element.sendKeys("john.luiz.2001@gmail.com");
-		
-		//Find Element by className
-		driver.findElement(By.className("VfPpkd-RLmnJb")).click();
-		
-		Thread.sleep(3000);
-		
-		//Find Element by className
-		driver.findElement(By.name("password")).sendKeys("12345");	
-		//driver.findElement(By.name("password")).sendKeys(rightPassword);	
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.className("VfPpkd-RLmnJb")).click();
-		Thread.sleep(4000);
-		
-		String at = driver.getTitle();
-		String et = "john.luiz.2001@gmail.com - Gmail";
-		
-		System.out.println(at);		
-		Thread.sleep(4000);
-		
-		Assert.assertTrue("title page contains john.luiz.2001@gmail.com - Gmail, meaning it logged in",at.contains(et));
-		
-
-
-	}
-  
-
-  
-
 
 }
