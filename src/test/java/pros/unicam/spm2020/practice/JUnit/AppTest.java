@@ -15,14 +15,14 @@ public class AppTest
      * Rigorous Test :-)
      */
     @Test
-    @Disabled
+    @Tag("UnitTest")
     public void shouldAnswerWithTrue()
     {
         assertTrue( true );
     }
     
     @Test
-    @Tag("UnitTest")
+    @Disabled
     public void shouldAnswerWithTrue2()
     {
         assertTrue( false );
