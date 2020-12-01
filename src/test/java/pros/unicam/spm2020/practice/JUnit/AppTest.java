@@ -23,14 +23,6 @@ public class AppTest
     }
     
     @Test
-    @Tag("UnitTest")
-    public void shouldAnswerWithTrueT()
-    {
-        assertTrue( true );
-    }
-    
-    
-    @Test
     @Disabled
     public void shouldAnswerWithTrue2()
     {
