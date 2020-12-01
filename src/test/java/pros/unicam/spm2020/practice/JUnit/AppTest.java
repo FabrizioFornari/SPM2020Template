@@ -16,12 +16,19 @@ public class AppTest
      * Rigorous Test :-)
      */
     @Test
-    @DisplayName("😈")
     @Tag("UnitTest")
     public void shouldAnswerWithTrue()
     {
         assertTrue( true );
     }
+    
+    @Test
+    @Tag("UnitTest")
+    public void shouldAnswerWithTrueT()
+    {
+        assertTrue( true );
+    }
+    
     
     @Test
     @Disabled
