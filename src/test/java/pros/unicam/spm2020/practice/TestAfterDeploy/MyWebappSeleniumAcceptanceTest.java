@@ -77,7 +77,7 @@ class MyWebappSeleniumAcceptanceTest {
 	void testMyAppTitle() {
 		  driver.navigate().to(address);
 	      System.out.println("Title is: "+driver.getTitle());
-	      assertTrue(driver.getTitle().contains("SPM 20203"));
+	      assertTrue(driver.getTitle().contains("SPM 2020"));
 	}
 
 }
