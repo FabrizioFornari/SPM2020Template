@@ -73,7 +73,7 @@ class MyWebappSeleniumAcceptanceTest {
 	}
 	
 	@Test
-	//@Disabled
+	@Disabled
 	@Tag("AcceptanceTest")
 	void testMyAppTitle() {
 		  driver.navigate().to(address);
