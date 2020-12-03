@@ -22,6 +22,8 @@ public class AppTest
         assertTrue( true );
     }
     
+    //we changed just to see that the jenkins build gets triggered
+    
     @Test
     @Disabled
     public void shouldAnswerWithTrue2()
