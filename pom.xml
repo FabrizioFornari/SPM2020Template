@@ -193,7 +193,7 @@
 				<version>2.2</version>
 				<configuration>
 					<!-- Use tomcat9 Deploy app here server Values in tags and step 2 maven In the configuration file id Value consistent-->
-				    <!--<url>http://localhost:8080/manager/text</url>-->
+				    <!-- <url>http://localhost:8080/manager/text</url>-->
 					<username>war-deployer</username>
 					<password>maven-tomcat-plugin</password>
 					<update>true</update>
