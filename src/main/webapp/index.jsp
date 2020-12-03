@@ -1,5 +1,5 @@
 <html>
-<title>SPM 2020</title>
+<title>SPM</title>
 <body>
 <h2>Hello World!</h2>
 Ciao a Tutti!
