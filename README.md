@@ -11,7 +11,7 @@ You can git clone it and import it as a Maven project.
 https://shields.io
 
 [Jenkins]
-[![Build Status](http://apromore.unicam.it:8080/jenkins/buildStatus/icon?job=SPM2020Template)](http://apromore.unicam.it:8080/jenkins/me/my-views/view/all/job/SPM2020Template/) 
+[![Build Status](http://apromore.unicam.it:8080/jenkins/buildStatus/icon?job=spmProject2020)](http://apromore.unicam.it:8080/jenkins/me/my-views/view/all/job/spmProject2020/) 
 
 [Travis CI]
 [![Build Status](https://img.shields.io/travis/FabrizioFornari/SPM2020Template/master.svg)](https://travis-ci.org/FabrizioFornari/SPM2020Template.svg?branch=master) 
