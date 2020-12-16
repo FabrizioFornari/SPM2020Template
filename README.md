@@ -15,3 +15,5 @@ https://shields.io
 
 [Travis CI]
 [![Build Status](https://img.shields.io/travis/FabrizioFornari/SPM2020Template/master.svg)](https://travis-ci.org/FabrizioFornari/SPM2020Template.svg?branch=master) 
+
+https://travis-ci.org/FabrizioFornari/SPM2020Template.svg?branch=main
