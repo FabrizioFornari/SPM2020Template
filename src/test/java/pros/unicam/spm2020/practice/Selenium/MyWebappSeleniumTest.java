@@ -71,6 +71,7 @@ class MyWebappSeleniumTest {
 		driver.quit();
 	}
 	
+	
 	@Test
 	@Disabled
 	void testMyAppTitle() {
