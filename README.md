@@ -14,6 +14,5 @@ https://shields.io
 [![Build Status](http://apromore.unicam.it:8080/jenkins/job/spmProject2020/badge/icon)](http://apromore.unicam.it:8080/jenkins/job/spmProject2020/)
 
 [Travis CI]
-[![Build Status](https://img.shields.io/travis/FabrizioFornari/SPM2020Template/master.svg)](https://travis-ci.org/FabrizioFornari/SPM2020Template.svg?branch=master) 
+[![Build Status](https://travis-ci.org/FabrizioFornari/SPM2020Template.svg?branch=main)](https://travis-ci.org/FabrizioFornari/SPM2020Template)
 
-https://travis-ci.org/FabrizioFornari/SPM2020Template.svg?branch=main
