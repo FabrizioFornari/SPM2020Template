@@ -72,6 +72,7 @@ class MyWebappSeleniumTest {
 	}
 	
 	
+	
 	@Test
 	@Disabled
 	void testMyAppTitle() {
